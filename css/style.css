@@ -52,13 +52,15 @@ h6 {
     font-size: 6rem;
     text-align: center;
     color: #ffffff;
-    margin: 10px 0;
+    margin: 10px 15px;
+
 }
 
 .header-paragraph {
     z-index: 2;
     font-size: 2rem;
     color: #cccccc;
+    margin: 0px 15px;
 }
 
 .link {
@@ -128,8 +130,7 @@ h6 {
 }
 
 .nav-menu {
-    display: none;
-    /* <<<<<<<<<<<<<<<<<<display: flex;<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -152,6 +153,7 @@ h6 {
 }
 
 .dropdown-button {
+    display: none;
     border: none;
     background: none;
     color: #777777;
@@ -162,51 +164,6 @@ h6 {
     outline: none;
     color: #222222;
 }
-
-/*------------------------*/
-
-.nav-menu-mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #ffffff;
-    animation: show-menu;
-    animation-duration: 0.5s;
-    height: calc(100vh - 115px);
-    top: 115px;
-    right: 0;
-    width: 40%;
-    position: fixed;
-}
-
-.nav-menu-hide {
-    animation: hide-menu;
-    animation-duration: 0.5s;
-}
-
-@keyframes show-menu {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-
-@keyframes hide-menu {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
-}
-
-
-
-/*----------------------------*/
 
 .article {
     display: flex;
@@ -222,6 +179,8 @@ h6 {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .article-services {
@@ -259,6 +218,7 @@ h6 {
 .section-services-title {
     font-size: 1.8rem;
     margin: 40px 0 0 0;
+    text-align: center;
 }
 
 .section-services-paragraph {
@@ -409,6 +369,7 @@ h6 {
 
 .section-dev {
     display: flex;
+    flex-shrink: 10;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -603,7 +564,7 @@ h6 {
 
 .contact-header {
     background-color: #7cc576;
-    padding: 70px 0;
+    padding: 70px 15px;
 }
 
 .contact-title {
@@ -636,6 +597,7 @@ h6 {
 .partners-list {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0;
@@ -666,6 +628,7 @@ h6 {
     align-items: flex-start;
     flex-direction: column;
     width: 20%;
+    margin: 0 15px;
 }
 
 .info-contact-title {
@@ -798,4 +761,169 @@ h6 {
 
 .footer-link-googleplus:hover {
     background-color: #da2713;
+}
+
+.nav-menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    animation: show-menu;
+    animation-duration: 0.5s;
+    height: calc(100vh - 115px);
+    top: 115px;
+    right: 0;
+    width: 40%;
+    position: fixed;
+}
+
+.nav-menu-hide {
+    animation: hide-menu;
+    animation-duration: 0.5s;
+}
+
+@keyframes show-menu {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+@keyframes hide-menu {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 1330px) {
+    .article-project {
+        background-size: auto 40%;
+        background-position: right 70%;
+    }
+
+    .info {
+        justify-content: space-around;
+    }
+
+    .partners-list {
+        width: 100%;
+    }
+}
+
+@media (max-width: 830px) {
+    .section-services {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .section-support {
+        width: 100%;
+    }
+
+    .section-support::after {
+        width: 100%;
+        left: 0;
+    }
+
+    .article-project {
+        background-image: none;
+    }
+
+    .section-project {
+        width: 70%;
+        padding-right: 0;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .culture-section {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .clients-section {
+        flex-direction: column;
+    }
+
+    .quote-right {
+        order: 2;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-contact {
+        width: 70%;
+    }
+
+    .info-contact-title {
+        align-self: center;
+    }
+
+    .partners-list-item {
+        width: 50%;
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-support {
+        padding: 20px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu-mobile {
+        display: flex;
+    }
+
+    .dropdown-button {
+        display: block;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-copyright {
+        width: 70%;
+        order: 2;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-dev-container {
+        flex-direction: column;
+    }
+
+    .project-icon-border {
+        margin: 15px;
+    }
+
+    .section-project-title,
+    .section-project-paragraph,
+    .section-dev-paragraph {
+        text-align: center;
+    }
+
+    .section-dev {
+        align-items: center;
+    }
+
+    .partners-list-item {
+        width: 100%;
+    }
 }
