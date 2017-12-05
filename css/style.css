@@ -61,6 +61,7 @@ h6 {
     font-size: 2rem;
     color: #cccccc;
     margin: 0px 15px;
+    text-align: center;
 }
 
 .link {
@@ -923,7 +924,37 @@ h6 {
         align-items: center;
     }
 
+    .section-dev-title {
+        text-align: center;
+    }
+
     .partners-list-item {
         width: 100%;
+    }
+
+    .footer-copyright {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+
+    .clients-quote {
+        font-size: 1.4rem;
+    }
+
+    .clients-signature {
+        font-size: 1.2rem;
+    }
+
+    .header-title {
+        font-size: 4rem;
+    }
+
+    .services-title,
+    .support-title,
+    .project-title,
+    .culture-title,
+    .clients-title,
+    .contact-title {
+        font-size: 3rem;
     }
 }
